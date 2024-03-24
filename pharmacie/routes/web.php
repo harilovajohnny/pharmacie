@@ -119,7 +119,12 @@ Route::group(['middleware' => 'adminlocalize'], function () {
             //------------ CATEGORY ------------
             Route::get('category/status/{id}/{status}', 'Back\CategoryController@status')->name('back.category.status');
             Route::get('category/feature/{id}/{status}', 'Back\CategoryController@feature')->name('back.category.feature');
+            
             Route::resource('category', 'Back\CategoryController', ['as' => 'back', 'except' => 'show']);
+            
+            Route::resource('categorimedicament', 'Back\CategorieMedicamentController', ['as' => 'back', 'except' => 'show']);
+
+            
 
             //------------ SUB CATEGORY ------------
             Route::get('subcategory/status/{id}/{status}', 'Back\SubCategoryController@status')->name('back.subcategory.status');

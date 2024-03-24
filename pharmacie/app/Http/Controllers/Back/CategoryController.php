@@ -100,6 +100,7 @@ class CategoryController extends Controller
      */
     public function edit(Category $category)
     {
+        
         return view('back.category.edit',compact('category'));
     }
 
@@ -133,7 +134,7 @@ class CategoryController extends Controller
        }else{
         return redirect()->route('back.category.index')->withError($mgs['message']);
        }
-        
+
     }
 
 
